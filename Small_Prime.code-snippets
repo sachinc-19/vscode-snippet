@@ -1,0 +1,28 @@
+{
+	// Place your cpp workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Print to console": {
+		"scope": "cpp",
+		"prefix": "sprime",
+		"body": [
+	    "bool s_prime(int n) ",
+        "{",
+        "\tif(n<=1)  return false;",
+        "\tif(n<=3)  return true;",
+        "\tif(n%2==0||n%3==0) return false;",
+        "\tfor(int i=5; i*i<=n; i=i+6)",
+        "\tif (n%i == 0 || n%(i+2) == 0)", 
+        "\treturn false;",
+        "\treturn true;",
+        "}",
+			// "console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}
